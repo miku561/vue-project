@@ -1,27 +1,19 @@
-# daily
+# 知乎日报 web 版
 
-> This is a exercise for Vue.js
+> proxy.js 为代理服务器文件
 
-## Build Setup
+## 服务器代理知乎日报接口
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+# Node 环境下
+ node proxy.js 
 ```
+## 本地项目运行
+``` bash
+# 安装依赖
+npm install 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 本地运行
+npm run dev
+```
+> 若需要将项目部署与服务器。请将 src/libs/utils.js 的 apiPath 变量改为你服务器的ip
