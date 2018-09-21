@@ -3,7 +3,7 @@ import axios from 'axios'
 //  基本配置
 const Util = {
   // imgPath: 'http://47.96.101.254:8011/img/',
-  apiPath: 'http://47.96.101.254:8081/'
+  apiPath: 'http://127.0.0.1:8081/'
 }
 
 // Ajax 通用配置
