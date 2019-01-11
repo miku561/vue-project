@@ -16,7 +16,7 @@
       </div>
       <div class="daily-list" ref="list" @scroll="handleScroll">
         <template v-if="type === 'recommend'">
-          <div v-for="list in recommendList" :key="list.id">
+          <div v-for="list in recommendList" :key="list.id" class="daily-wrap">
             <div class="daily-date">{{ formatDay(list.date) }}</div>
             <Item
                 v-for="item in list.stories"
@@ -95,6 +95,7 @@ export default {
       let day = date.substr(6, 2)
       if (month.substr(0, 1) === '0') month = month.substr(1, 1)
       if (day.substr(0, 1) === '0') day = day.substr(1, 1)
+      console.log(`${month} 月 ${day} 日`)
       return `${month} 月 ${day} 日`
     },
     handleScroll () {
@@ -121,4 +122,7 @@ export default {
 
 </script>
 <style lang='scss' scoped>
+  .daily-wrap{
+    min-height: 110%;
+  }
 </style>
